@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct T_LPrototypeDemoApp: App {
+    @StateObject var homeModel = HomeContentViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeContentView(homeModel: homeModel)
+//                .environmentObject(homeModel)
         }
     }
 }
